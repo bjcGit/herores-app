@@ -1,0 +1,10 @@
+<div class="card h-150 mb-3">
+    <img [src]="hero.img" class="card-img-top" alt="{{ hero.nombre }}" (error)="onImageError($event)">
+    <div class="card-body">
+      <h5 class="card-title">{{ hero.nombre }}</h5>
+      <p class="card-text">{{ hero.bio }}</p>
+      <a [routerLink]="['/heroes', hero._id, 'edit']" class="btn btn-primary">Editar</a>
+      <button class="btn btn-danger" (click)="deleteHero()">Eliminar</button>
+    </div>
+  </div>
+  

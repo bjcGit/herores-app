@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <h2>Sincronizar Personajes</h2>
+    <div *ngIf="heroesToSync.length > 0; else noHeroes">
+      <p>Los siguientes personajes están en el Local Storage y no han sido sincronizados:</p>
+      <ul>
+        <li *ngFor="let hero of heroesToSync">{{ hero.nombre }}</li>
+      </ul>
+      <button class="btn btn-success" (click)="syncHeroes()">Sincronizar</button>
+    </div>
+    <ng-template #noHeroes>
+      <p>No hay personajes en el Local Storage.</p>
+    </ng-template>
+  </div>
+  

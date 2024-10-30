@@ -1,0 +1,8 @@
+<div class="container mt-4">
+  <h2>Lista de Héroes</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let hero of heroes">
+      <app-card [hero]="hero"></app-card>
+    </div>
+  </div>
+</div>
